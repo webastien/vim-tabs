@@ -1,3 +1,5 @@
+if exists('vim_tabs__loaded') | finish | endif | let vim_tabs__loaded = 1
+
 set tabline=%!MyTabLine()
 
 function MyTabLine()
