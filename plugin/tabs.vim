@@ -24,7 +24,7 @@ function MyTabLabel(n)
     let bname = (bname != '')? fnamemodify(bname, ':t'): 'new'
     let bname = getbufvar(bindx, "&mod")? '+'. bname .'+': bname
 
-    if bname != '__Tagbar__' && !count(tabname, bname)
+    if bname !~ '^__Tagbar__\.' && !count(tabname, bname)
       let win = bufwinnr(bindx)
 
       if win == -1 || !getwinvar(win, '&previewwindow')
